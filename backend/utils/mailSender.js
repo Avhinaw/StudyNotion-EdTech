@@ -1,5 +1,6 @@
-const nodeMailer = require('nodemailer');
+const nodeMailer = require('nodemailer'); // nodemailer package
 
+// function to send mail to User
 const mailSender = async (email, title, body) => {
     try{
         let transporter = nodeMailer.createTransport({
@@ -18,7 +19,7 @@ const mailSender = async (email, title, body) => {
         })
         console.log(info);
         return info;
-    }catch(err) {
+    }catch(err) { //bug! bug!
         console.log(`error while mail sending ${err.message}`);
     }
 }

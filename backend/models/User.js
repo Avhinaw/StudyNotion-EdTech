@@ -33,6 +33,7 @@ const userSchema = new mongoose.Schema({
     accountType: {
         type: String,
         enum: ['Developer', 'Instructor', 'Student'],
+        // default: 'Student',
         required: true
     },
     additionalDetails: {
